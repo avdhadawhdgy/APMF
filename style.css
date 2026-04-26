@@ -109,3 +109,31 @@ a {
  opacity: .7;
  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
+
+@keyframes bolakbalik {
+  0% {
+    left: 0;
+    transform: scaleX(1); /* hadap kanan */
+  }
+  50% {
+    left: calc(100% - 40px);
+    transform: scaleX(1);
+  }
+  51% {
+    transform: scaleX(-1); /* balik arah */
+  }
+  100% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 40px;
+
+  animation: bolakbalik 6s linear infinite;
+}
+
