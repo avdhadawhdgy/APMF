@@ -13,7 +13,6 @@ div {
     align-items: center;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .img-Background {
@@ -132,7 +131,7 @@ a {
 .dino {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: calc(100% - 40px);
   right: 0;
   font-size: 50px;
 
