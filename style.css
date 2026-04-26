@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow-y: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    scroll-margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@keyframes smoothUp {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+h1.title {
+  font-family: "Beau Rivage", cursive;
+  color: #ffffff;
+  text-align: center;
+  font-weight: auto;
+  font-size: 50px;
+  animation: smoothUp 1s ease-in-out;
+  margin-bottom: auto;
+}
+
+h4.description {
+  font-family: "Beau Rivage", cursive;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  font-size: 20px;
+  animation: smoothUp 1s ease-in-out;
+  margin: 1px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+  a:hover {
+    letter-spacing: 2px;
+}
+
+.button {
+ --glow-color: rgb(255, 255, 255);
+ --glow-spread-color: rgba(255, 255, 255, 0.781);
+ --enhanced-glow-color: rgb(255, 255, 255);
+ --btn-color: rgba(225, 149, 7, 0.704);
+ border: .15em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 25px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ transition: all 0.3s;
+ display: flex;
+ align-items: center;
+ font-family: 'Times New Roman', Times, serif, sans-serif;
+ animation: smoothUp 4s ease-in-out;
+ margin-top: 100px;
+
+}
+
+.button::after {
+ pointer-events: none;
+ content: "";
+ position: center;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
