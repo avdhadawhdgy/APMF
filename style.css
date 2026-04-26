@@ -132,7 +132,6 @@ a {
   position: absolute;
   bottom: 0;
   left: calc(100% - 40px);
-  right: 0;
   font-size: 50px;
 
   animation: bolakbalik 6s linear infinite;
