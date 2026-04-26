@@ -113,18 +113,18 @@ a {
 @keyframes bolakbalik {
   0% {
     left: 0;
-    transform: scaleX(1); /* hadap kanan */
+    transform: scaleX(-1); /* hadap kanan */
   }
   50% {
     left: calc(100% - 40px);
-    transform: scaleX(1);
+    transform: scaleX(-1);
   }
   51% {
-    transform: scaleX(-1); /* balik arah */
+    transform: scaleX(1); /* balik arah */
   }
   100% {
     left: 0;
-    transform: scaleX(-1);
+    transform: scaleX(1);
   }
 }
 
@@ -132,7 +132,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 40px;
+  font-size: 50px;
 
   animation: bolakbalik 6s linear infinite;
 }
